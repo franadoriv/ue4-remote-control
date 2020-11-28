@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.RemoteControlLibrary = void 0;
 const uobject_1 = require("../uobject");
 // Implements interface for https://github.com/sovietspaceship/UE4RemoteControlLibrary
 class RemoteControlLibrary extends uobject_1.UObject {

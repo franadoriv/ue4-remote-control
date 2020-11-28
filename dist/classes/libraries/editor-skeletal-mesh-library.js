@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorSkeletaMeshLibrary = void 0;
 const uobject_1 = require("../uobject");
 class EditorSkeletaMeshLibrary extends uobject_1.UObject {
     constructor() {

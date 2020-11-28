@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.buildUObjectPath = exports.UObject = void 0;
 const resource_1 = require("../api/resource");
 class UObject extends resource_1.Resource {
     constructor(objectPath) {

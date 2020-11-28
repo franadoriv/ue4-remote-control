@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.waitServer = void 0;
 const editor_level_library_1 = require("../classes/libraries/editor-level-library");
 const Bluebird = require("bluebird");
 function waitServer(delay = 1000, timeout = 0) {

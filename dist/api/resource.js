@@ -9,8 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Resource = void 0;
 const rp = require("request-promise");
-const UE4_SERVER_PORT = 8080;
+const UE4_SERVER_PORT = process.env.UE4_SERVER_PORT || 8080;
+const UE4_SERVER_ADDRESS = process.env.UE4_SERVER_ADDRESS || "http://localhost";
 const lodash_1 = require("lodash");
 const debug = require("debug");
 const d = debug('ue4-remote-control:Resource');
@@ -18,7 +20,7 @@ class Resource {
     makeRequest(method, endpoint, body) {
         return __awaiter(this, void 0, void 0, function* () {
             const options = {
-                uri: `http://localhost:${UE4_SERVER_PORT}${endpoint}`,
+                uri: `${UE4_SERVER_ADDRESS}:${UE4_SERVER_PORT}${endpoint}`,
                 method,
                 body: lodash_1.omitBy(body, lodash_1.isUndefined),
                 json: true

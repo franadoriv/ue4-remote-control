@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.EditorAssetLibrary = void 0;
 const uobject_1 = require("../uobject");
 class EditorAssetLibrary extends uobject_1.UObject {
     constructor() {

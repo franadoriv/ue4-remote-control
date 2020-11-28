@@ -9,6 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.AActor = void 0;
 const uobject_1 = require("../uobject");
 class AActor extends uobject_1.UObject {
     SetActorLocation(newLocation, bSweep) {
