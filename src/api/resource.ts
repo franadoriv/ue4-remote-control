@@ -1,7 +1,6 @@
 import * as rp from 'request-promise'
 
-const UE4_SERVER_PORT = process.env.UE4_SERVER_PORT || 8080;
-const UE4_SERVER_ADDRESS = process.env.UE4_SERVER_ADDRESS || "http://localhost";
+const UE4_SERVER_ADDRESS = process.env.UE4_SERVER_ADDRESS || "http://localhost:8080";
 
 export type HttpMethodCalls = 'put' | 'PUT'
 
@@ -14,7 +13,7 @@ const d = debug('ue4-remote-control:Resource')
 export class Resource {
     async makeRequest<Req, Res>(method: HttpMethodCalls, endpoint: string, body: Req): Promise<Res> {
         const options: rp.Options = {
-            uri: `${UE4_SERVER_ADDRESS}:${UE4_SERVER_PORT}${endpoint}`,
+            uri: `${UE4_SERVER_ADDRESS}${endpoint}`,
             method,
             body: omitBy(body, isUndefined),
             json: true
